@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/shared/navbar"
 import { Footer } from "@/components/shared/footer"
+import { ScrollTriggeredCTA } from "@/components/cta/scroll-triggered-cta"
 import { HeroSection } from "@/components/home/hero"
 import { WhatWeDoSection } from "@/components/home/what-we-do"
 import { OurProductsSection } from "@/components/home/our-products"
@@ -12,6 +13,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
+      <ScrollTriggeredCTA
+        triggerPoint={600}
+        title="Ready to Get Started?"
+        description="Explore our AI solutions and transform your business today."
+        cta={{ text: "View Solutions", href: "/services" }}
+      />
 
       {/* Hero Section */}
       <HeroSection />

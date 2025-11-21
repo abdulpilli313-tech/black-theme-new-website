@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/shared/navbar"
 import { Footer } from "@/components/shared/footer"
+import { ScrollTriggeredCTA } from "@/components/cta/scroll-triggered-cta"
 import { ServicesHero } from "@/components/services/hero"
 import { CoreServices } from "@/components/services/core-services"
 import { AICapabilitiesMap } from "@/components/services/ai-capabilities-map"
@@ -14,6 +15,12 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
+      <ScrollTriggeredCTA
+        triggerPoint={700}
+        title="Interested in Our Services?"
+        description="Let's discuss how AI can transform your business."
+        cta={{ text: "Book Consultation", href: "/contact" }}
+      />
       <ServicesHero />
       <CoreServices />
       <AICapabilitiesMap />

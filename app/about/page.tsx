@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/shared/navbar"
 import { Footer } from "@/components/shared/footer"
+import { ScrollTriggeredCTA } from "@/components/cta/scroll-triggered-cta"
 import { AboutHero } from "@/components/about/hero"
 import { CompanyVision } from "@/components/about/vision"
 import { MissionValues } from "@/components/about/mission-values"
@@ -18,6 +19,12 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
+      <ScrollTriggeredCTA
+        triggerPoint={600}
+        title="Learn Our Story"
+        description="Discover how we're leading AI innovation."
+        cta={{ text: "Get Started", href: "/services" }}
+      />
       <AboutHero />
       <CompanyVision />
       <MissionValues />

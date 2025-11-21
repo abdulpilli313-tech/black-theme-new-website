@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Container } from "./container"
+import { FooterCTA } from "@/components/cta/footer-cta"
 
 const footerSections = [
   {
@@ -33,7 +34,9 @@ const footerSections = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 mt-32">
+    <footer className="relative border-t border-white/10">
+      <FooterCTA />
+
       <Container>
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

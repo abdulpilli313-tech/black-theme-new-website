@@ -1,5 +1,7 @@
+"use client"
 import Navbar from "@/components/shared/navbar"
 import Footer from "@/components/shared/footer"
+import { ScrollTriggeredCTA } from "@/components/cta/scroll-triggered-cta"
 import Hero from "@/components/home3/hero"
 import Intro from "@/components/home3/intro"
 import Products from "@/components/home3/products"
@@ -16,6 +18,13 @@ export default function Home3() {
     <>
       <Navbar />
       <main className="bg-background">
+        <ScrollTriggeredCTA
+          triggerPoint={1000}
+          title="Transform Your Business"
+          description="Experience the future of AI-powered automation."
+          cta={{ text: "Explore Now", href: "/products" }}
+        />
+
         <Hero />
         <Intro />
         <Products />

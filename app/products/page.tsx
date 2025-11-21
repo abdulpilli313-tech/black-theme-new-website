@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Navbar } from "@/components/shared/navbar"
 import { Footer } from "@/components/shared/footer"
+import { ScrollTriggeredCTA } from "@/components/cta/scroll-triggered-cta"
 import { ProductsHero } from "@/components/products/hero"
 import { ProductsShowcase } from "@/components/products/showcase"
 import { ProductDetail } from "@/components/products/product-detail"
@@ -17,6 +18,12 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <ScrollTriggeredCTA
+        triggerPoint={800}
+        title="Explore Our Full Suite"
+        description="Discover all our AI-powered products and solutions."
+        cta={{ text: "Request Demo", href: "/contact" }}
+      />
       <ProductsHero />
       <ProductsShowcase onSelectProduct={setSelectedProduct} />
       <ProductDetail productId={selectedProduct} onClose={() => setSelectedProduct(null)} />

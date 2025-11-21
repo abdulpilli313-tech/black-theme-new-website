@@ -3,12 +3,13 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
+import { FloatingCTAButton } from "@/components/cta/floating-cta-button"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-// <CHANGE> Updated metadata for AI Software House
+// Updated metadata for AI Software House
 export const metadata: Metadata = {
   title: "AI Software House | Building Intelligent Software for the AI Era",
   description:
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   },
 }
 
-// <CHANGE> Added viewport configuration for dark theme
+// Added viewport configuration for dark theme
 export const viewport: Viewport = {
   themeColor: "#0D0D0D",
   width: "device-width",
@@ -49,9 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
-        {/* <CHANGE> Added ThemeProvider with dark mode default */}
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
+          <FloatingCTAButton />
         </ThemeProvider>
         <Analytics />
       </body>
