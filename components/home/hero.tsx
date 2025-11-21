@@ -3,10 +3,11 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [particles, setParticles] = useState<Array<{ x: number; y: number }>>([])
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect()
@@ -15,6 +16,14 @@ export function HeroSection() {
       y: (e.clientY - rect.top) / rect.height,
     })
   }
+
+  useEffect(() => {
+    const initialParticles = [...Array(5)].map(() => ({
+      x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1000),
+      y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 800),
+    }))
+    setParticles(initialParticles)
+  }, [])
 
   return (
     <section
@@ -43,13 +52,13 @@ export function HeroSection() {
 
       {/* Animated particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(5)].map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-blue-500 rounded-full opacity-30"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: particle.x,
+              y: particle.y,
             }}
             animate={{
               y: -100,
