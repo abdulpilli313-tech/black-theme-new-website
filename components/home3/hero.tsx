@@ -14,6 +14,8 @@ export default function Hero() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    if (typeof window === "undefined") return
+
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 

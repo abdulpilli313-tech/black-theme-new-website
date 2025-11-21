@@ -3,9 +3,15 @@
 import { motion } from "framer-motion"
 import { Container } from "@/components/shared/container"
 import { useMousePosition } from "@/hooks/use-mouse-position"
+import { useEffect, useState } from "react"
 
 export function Home2Intro() {
   const mouse = useMousePosition()
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    setDimensions({ width: window.innerWidth, height: window.innerHeight })
+  }, [])
 
   return (
     <section className="relative py-32 px-4 overflow-hidden">
@@ -13,15 +19,15 @@ export function Home2Intro() {
         <motion.div
           className="absolute top-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
-            x: (mouse.x - window.innerWidth / 2) * 0.05,
-            y: (mouse.y - window.innerHeight / 2) * 0.05,
+            x: dimensions.width ? (mouse.x - dimensions.width / 2) * 0.05 : 0,
+            y: dimensions.height ? (mouse.y - dimensions.height / 2) * 0.05 : 0,
           }}
         />
         <motion.div
           className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
           animate={{
-            x: (mouse.x - window.innerWidth / 2) * -0.03,
-            y: (mouse.y - window.innerHeight / 2) * -0.03,
+            x: dimensions.width ? (mouse.x - dimensions.width / 2) * -0.03 : 0,
+            y: dimensions.height ? (mouse.y - dimensions.height / 2) * -0.03 : 0,
           }}
         />
       </div>
