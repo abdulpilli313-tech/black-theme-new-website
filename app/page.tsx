@@ -14,12 +14,12 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <ScrollTriggeredCTA
+      {/* <ScrollTriggeredCTA
         triggerPoint={600}
         title="Ready to Get Started?"
         description="Explore our AI solutions and transform your business today."
         cta={{ text: "View Solutions", href: "/services" }}
-      />
+      /> */}
 
       {/* Hero Section */}
       <HeroSection />
@@ -40,7 +40,7 @@ export default function HomePage() {
       <TechStripSection />
 
       {/* Final CTA Section */}
-      <FinalCTASection />
+      {/* <FinalCTASection /> */}
 
       <Footer />
     </div>

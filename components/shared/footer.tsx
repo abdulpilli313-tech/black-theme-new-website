@@ -46,7 +46,7 @@ export function Footer() {
                 <div className="w-10 h-10 rounded-xl gradient-blue-purple flex items-center justify-center font-bold text-white text-xl">
                   AI
                 </div>
-                <span className="text-lg font-bold gradient-text">AI Software House</span>
+                <span className="text-lg font-bold gradient-text"> Permus Software House</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Building intelligent software for the AI era. Premium solutions for modern businesses.
@@ -76,7 +76,7 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} AI Software House. All rights reserved.
+              © {new Date().getFullYear()} Permus Software House. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

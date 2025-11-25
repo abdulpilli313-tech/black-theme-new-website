@@ -34,7 +34,7 @@ export default function Home3() {
         <Testimonials />
         <Industries />
         <Blog />
-        <FinalCta />
+        {/* <FinalCta /> */}
       </main>
       <Footer />
     </>

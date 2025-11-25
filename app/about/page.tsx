@@ -32,7 +32,7 @@ export default function AboutPage() {
       <Leadership />
       <WhatsUnique />
       <GlobalPresence />
-      <FinalCTA />
+      {/* <FinalCTA /> */}
       <Footer />
     </main>
   )

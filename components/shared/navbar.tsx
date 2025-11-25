@@ -41,9 +41,9 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 rounded-xl gradient-blue-purple flex items-center justify-center font-bold text-white text-xl">
-              AI
+         AI
             </div>
-            <span className="text-xl font-bold gradient-text hidden sm:inline">AI Software House</span>
+            <span className="text-xl font-bold gradient-text hidden sm:inline">Permus Software House</span>
           </Link>
 
           {/* Desktop Navigation */}

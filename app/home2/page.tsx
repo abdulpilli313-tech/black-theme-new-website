@@ -34,7 +34,7 @@ export default function Home2Page() {
         <Home2Testimonials />
         <Home2Industries />
         <Home2Blog />
-        <Home2FinalCTA />
+        {/* <Home2FinalCTA /> */}
       </main>
       <Footer />
     </div>
