@@ -17,7 +17,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      
       <ScrollTriggeredCTA
         triggerPoint={800}
         title="Explore Our Full Suite"

@@ -16,7 +16,7 @@ import { Home2FinalCTA } from "@/components/home2/final-cta"
 export default function Home2Page() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+   
       <main className="pt-20">
         <ScrollTriggeredCTA
           triggerPoint={800}

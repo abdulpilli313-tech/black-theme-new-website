@@ -16,7 +16,7 @@ import FinalCta from "@/components/home3/final-cta"
 export default function Home3() {
   return (
     <>
-      <Navbar />
+     
       <main className="bg-background">
         <ScrollTriggeredCTA
           triggerPoint={1000}

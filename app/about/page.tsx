@@ -18,7 +18,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
+     
       <ScrollTriggeredCTA
         triggerPoint={600}
         title="Learn Our Story"

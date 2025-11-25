@@ -14,7 +14,7 @@ import { ServicesCTA } from "@/components/services/cta"
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
+
       <ScrollTriggeredCTA
         triggerPoint={700}
         title="Interested in Our Services?"

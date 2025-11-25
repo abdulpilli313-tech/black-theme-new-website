@@ -12,7 +12,7 @@ import { FinalCTASection } from "@/components/home/final-cta"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+     
 
       {/* <ScrollTriggeredCTA
         triggerPoint={600}

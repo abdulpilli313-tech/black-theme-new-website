@@ -12,7 +12,7 @@ import CaseStudiesCTA from "@/components/case-studies/cta"
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
+  
       <main>
         <CaseStudiesHero />
         <CaseStudiesShowcase />

@@ -15,7 +15,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+    
       <BlogHero />
       <FeaturedPosts />
       <BlogCategories activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

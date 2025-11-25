@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { FloatingCTAButton } from "@/components/cta/floating-cta-button"
 import "./globals.css"
+import Navbar from "@/components/shared/navbar"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <Navbar />
           {children}
           <FloatingCTAButton />
         </ThemeProvider>
