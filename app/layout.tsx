@@ -12,7 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 // Updated metadata for AI Software House
 export const metadata: Metadata = {
-  title: "AI Software House | Building Intelligent Software for the AI Era",
+  title: "Permus Software House Ltd",
   description:
     "Premium AI solutions, custom software development, and enterprise automation. Specializing in AI Agents, MS365, Dynamics, and Cloud solutions.",
   generator: "v0.app",
@@ -20,19 +20,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/permus_logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/permus_logo.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+       url: "/permus_logo.png",
+        media: "(prefers-color-scheme: dark)",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/permus_logo.png",
   },
 }
 
